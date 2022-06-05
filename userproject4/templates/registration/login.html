@@ -1,0 +1,15 @@
+{% extends 'userapp/menu.html' %}
+
+{% block body_block %}
+<center>
+	<h1>Login Here</h1>
+	<form method="POST">
+		{{form.as_p}}
+		{% csrf_token %}
+		<button type="POST">Submit</button>
+	</form>
+	<div>&nbsp;</div>
+	<a href="/signup">Register Here</a>
+</center>
+
+{% endblock %}
